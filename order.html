@@ -7,13 +7,13 @@
 
   <!-- Bootstrap 4 (CSS) -->
  <link rel="stylesheet" href="bootstrap.min.css">
-          <!-- Твои стили -->
+          
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2662/2662503.png">
 </head>
 <body>
 
-  <!-- ================= ШАПКА (такая же, как на главной) ================= -->
+  <!-- ================= ШАПКА  ================= -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
     <div class="container">
 
@@ -47,7 +47,7 @@
     </div>
   </nav>
 
-  <!-- ================= ХЛЕБНЫЕ КРОШКИ ================= -->
+
   <div class="container mt-3">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb bg-white px-0">
@@ -237,7 +237,7 @@
     </div>
   </div>
 
-  <!-- ================= ПОДВАЛ (такой же, как на главной) ================= -->
+  <!-- ================= ПОДВАЛ ================= -->
   <footer class="bg-dark text-white py-5">
     <div class="container">
       <div class="row">
@@ -292,7 +292,7 @@
 
 <script>
   // ===== МАСКА ДЛЯ ТЕЛЕФОНА =====
-  // Поле id="phone" будет автоматически форматироваться: +7 (___) ___-__-__
+  
   $(function () {
     $("#phone").mask("+7 (999) 999-99-99");
   });
@@ -303,18 +303,18 @@
     var form = document.getElementById('orderForm');
 
     form.addEventListener('submit', function (event) {
-      // Проверяем только телефон на полную длину (маска не всегда триггерит validate)
+      
       var phone = document.getElementById('phone');
-      var digits = phone.value.replace(/\D/g, ''); // оставляем только цифры
-      var phoneOk = digits.length === 11;          // +7 и 10 цифр = 11
+      var digits = phone.value.replace(/\D/g, ''); 
+      var phoneOk = digits.length === 11;        
       phone.setCustomValidity(phoneOk ? '' : 'Введите телефон полностью');
 
-      // Стандартная проверка HTML5 (required, type=email и т.д.)
+      
       if (!form.checkValidity()) {
         event.preventDefault();
         event.stopPropagation();
       } else {
-        event.preventDefault(); // временно, пока нет сервера — заявка никуда не уходит
+        event.preventDefault(); 
         alert('Заявка отправлена! Мы свяжемся с вами в течение 15 минут.');
         form.reset();
         form.classList.remove('was-validated');
