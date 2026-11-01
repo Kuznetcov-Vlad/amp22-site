@@ -305,38 +305,11 @@
 
 <script>
   // ===== МАСКА ДЛЯ ТЕЛЕФОНА =====
-  
-  $(function () {
-    $("#phone").mask("+7 (999) 999-99-99");
-  });
+    $(function () {
+      $("#phone").mask("+7 (999) 999-99-99");
+    });
+  </script> <!-- Вот здесь закрылся старый скрипт -->
 
-  // ===== ПРОВЕРКА ФОРМЫ ПЕРЕД ОТПРАВКОЙ =====
-  (function () {
-    'use strict';
-    var form = document.getElementById('orderForm');
-
-    form.addEventListener('submit', function (event) {
-      
-      var phone = document.getElementById('phone');
-      var digits = phone.value.replace(/\D/g, ''); 
-      var phoneOk = digits.length === 11;        
-      phone.setCustomValidity(phoneOk ? '' : 'Введите телефон полностью');
-
-      
-      if (!form.checkValidity()) {
-        event.preventDefault();
-        event.stopPropagation();
-      } else {
-        event.preventDefault(); 
-        alert('Заявка отправлена! Мы свяжемся с вами в течение 15 минут.');
-        form.reset();
-        form.classList.remove('was-validated');
-        return;
-      }
-
-      form.classList.add('was-validated');
-    }, false);
-  })();
-</script>
+  <script src="site.js"></script> <!-- А вот здесь подключается новый -->
 </body>
 </html>
