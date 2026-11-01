@@ -1,0 +1,183 @@
+/* ===== ПОДКЛЮЧЕНИЕ ШРИФТОВ ===== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+/* ===== ГЛОБАЛЬНЫЕ СТИЛИ ===== */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #2B2B2B;
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #2B2B2B;
+}
+
+/* ===== ШАПКА ===== */
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Легкая тень снизу */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #2B2B2B !important;
+}
+
+.navbar-brand::after {
+  content: "|";
+  color: #E67E22; /* Оранжевая полоска в логотипе */
+  margin-left: 5px;
+  font-weight: 300;
+}
+
+/* ===== БАННЕР (Главная) ===== */
+section.bg-secondary {
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+section.bg-secondary .badge {
+  background-color: #F5E6D3 !important; /* Песочный цвет */
+  color: #2B2B2B !important;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+section.bg-secondary h1 {
+  color: #ffffff;
+  font-size: 3.5rem;
+  line-height: 1.2;
+}
+
+section.bg-secondary p.lead {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* ===== КНОПКИ ===== */
+.btn-warning {
+  background-color: #E67E22 !important;
+  border-color: #E67E22 !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+  background-color: #D35400 !important; /* Темнее при наведении */
+  border-color: #D35400 !important;
+  transform: translateY(-2px);
+}
+
+.btn-outline-warning {
+  color: #E67E22 !important;
+  border-color: #E67E22 !important;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.btn-outline-warning:hover {
+  background-color: #E67E22 !important;
+  color: #ffffff !important;
+}
+
+.btn-outline-light {
+  font-weight: 600;
+  border-radius: 6px;
+  border-width: 2px;
+}
+
+/* ===== СТАНДАРТЫ КАЧЕСТВА (Карточки) ===== */
+/* Стилизуем блоки с классами border rounded p-4 h-100 */
+.col-md-3 .border {
+  border: 1px solid #E0E0E0 !important;
+  border-radius: 12px !important;
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.col-md-3 .border:hover {
+  transform: translateY(-5px); /* Приподнимается при наведении */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Иконки в карточках (эмодзи) */
+.col-md-3 .border > div:first-child {
+  font-size: 1.5rem;
+  background-color: #F5E6D3;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* ===== ПОДВАЛ ===== */
+footer.bg-dark {
+  background-color: #2B2B2B !important;
+}
+
+footer a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #E67E22 !important; /* Оранжевый при наведении */
+  text-decoration: none;
+}
+
+/* ===== СТРАНИЦА ЗАЯВКИ (Форма) ===== */
+.form-control {
+  border: 1px solid #E0E0E0;
+  border-radius: 6px;
+  padding: 12px 15px;
+  font-size: 0.95rem;
+}
+
+.form-control:focus {
+  border-color: #E67E22;
+  box-shadow: 0 0 0 0.2rem rgba(230, 126, 34, 0.15);
+}
+
+/* Блок "Заявка принята" справа */
+.col-md-4 .bg-light {
+  background-color: #F5E6D3 !important; /* Песочный фон */
+  border: none !important;
+  border-radius: 12px !important;
+}
+
+.col-md-4 .bg-light h5 {
+  color: #2B2B2B;
+}
+
+/* Блок "Состояние полей" */
+.col-md-4 .border.rounded.p-3 {
+  border-radius: 12px !important;
+  border: 1px solid #E0E0E0 !important;
+}
+
+/* Хлебные крошки */
+.breadcrumb {
+  background-color: transparent;
+  padding-left: 0;
+}
+
+.breadcrumb-item a {
+  color: #E67E22;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
