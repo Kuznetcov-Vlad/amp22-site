@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113991793', 'ym');
+
+    ym(113991793, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/113991793" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>АМП22 — Оформить заявку</title>
+
+  <!-- Bootstrap 4 (CSS) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
+  <!-- Красивые всплывающие окна -->
+<script src="sweetalert2.min.js"></script>
+          <!-- Твои стили -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2662/2662503.png">
+</head>
+<body>
+
+  <!-- ================= ШАПКА (такая же, как на главной) ================= -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container">
+
+      <a class="navbar-brand font-weight-bold" href="index.html">
+        АМП22
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+              data-target="#mainMenu" aria-controls="mainMenu"
+              aria-expanded="false" aria-label="Меню">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Услуги</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Цены</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Проекты</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Отзывы</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center">
+          <a href="tel:+79833824611" class="mr-3 font-weight-bold text-dark">
+            +7 (983) 382-46-11
+          </a>
+          <a href="order.html" class="btn btn-outline-warning">Заказать звонок</a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ================= ХЛЕБНЫЕ КРОШКИ ================= -->
+  <div class="container mt-3">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb bg-white px-0">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Оформить заявку</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- ================= ЗАГОЛОВОК ================= -->
+  <div class="container mb-4">
+    <h1 class="h2 font-weight-bold">Оформить заявку на укладку тротуарной плитки</h1>
+    <p class="text-muted">
+      Заполните форму — мы свяжемся с вами в течение 15 минут и рассчитаем стоимость бесплатно.
+    </p>
+  </div>
+
+  <!-- ================= ОСНОВНАЯ ЧАСТЬ: ФОРМА + ПРАВАЯ КОЛОНКА ================= -->
+  <div class="container mb-5">
+    <div class="row">
+
+      <!-- ===== ЛЕВАЯ КОЛОНКА: ФОРМА ===== -->
+      <div class="col-md-8">
+
+        <form id="orderForm" novalidate>
+
+  <!-- Имя и Телефон -->
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="name">Имя*</label>
+      <input type="text" class="form-control" id="name" placeholder="Константин">
+      <div class="invalid-feedback">Пожалуйста, введите имя.</div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="phone">Телефон*</label>
+      <input type="tel" class="form-control" id="phone"
+             placeholder="+7 (___) ___-__-__" >
+      <div class="invalid-feedback">Введите телефон полностью.</div>
+    </div>
+  </div>
+
+  <!-- Email и Адрес -->
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" placeholder="primer@mail.ru">
+      <div class="invalid-feedback">Неверный формат email.</div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="address">Адрес объекта в Барнауле</label>
+      <input type="text" class="form-control" id="address" placeholder="ул. Ленина, д. 10">
+    </div>
+  </div>
+
+  <!-- Тип плитки (выпадающий список) и Площадь -->
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="type">Тип плитки</label>
+      <select class="form-control" id="type">
+        <option selected disabled>— выберите тип плитки —</option>
+        <option value="vibropress">Вибропрессованная</option>
+        <option value="vibrolit">Вибролитая</option>
+        <option value="klinker">Клинкерная</option>
+        <option value="bruschatka">Брусчатка</option>
+        <option value="bordюр">Бордюр / поребрик</option>
+        <option value="not-sure">Не знаю — нужна консультация</option>
+      </select>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="area">Площадь, м²</label>
+      <input type="number" class="form-control" id="area" placeholder="100">
+    </div>
+  </div>
+
+  <!-- Подготовка основания (радио) -->
+  <div class="form-group">
+    <label class="d-block">Подготовка основания</label>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="base" id="base1" value="yes" checked>
+      <label class="form-check-label" for="base1">Песчано-щебневая</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="base" id="base2" value="beton">
+      <label class="form-check-label" for="base2">Бетонное</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="base" id="base3" value="other">
+      <label class="form-check-label" for="base3">Другое основание</label>
+    </div>
+  </div>
+
+  <!-- Желаемые сроки (выпадающий список) -->
+  <div class="form-group">
+    <label for="dates">Желаемые сроки</label>
+    <select class="form-control" id="dates">
+      <option selected disabled>— выберите сроки —</option>
+      <option value="week">В течение недели</option>
+      <option value="month">В этом месяце</option>
+      <option value="next-month">В следующем месяце</option>
+      <option value="thinking">Ещё думаю</option>
+    </select>
+  </div>
+
+  <!-- Комментарий -->
+  <div class="form-group">
+    <label for="comment">Комментарий к заявке</label>
+    <textarea class="form-control" id="comment" rows="3"
+              placeholder="Оставьте сообщение, укажите, необходима ли демонтаж старого покрытия..."></textarea>
+  </div>
+
+  <!-- Чекбокс согласия -->
+  <div class="form-check mb-4">
+    <input class="form-check-input" type="checkbox" id="agree" >
+    <label class="form-check-label" for="agree">
+      Согласен на обработку моих <a href="#">персональных данных</a>*
+    </label>
+    <div class="invalid-feedback">Нужно согласие на обработку данных.</div>
+  </div>
+
+  <!-- Кнопка + телефон -->
+  <div class="d-flex align-items-center">
+    <button type="submit" class="btn btn-warning btn-lg mr-4">
+      Отправить заявку
+    </button>
+    <a href="tel:+79833824611" class="font-weight-bold text-dark">
+      +7 (983) 382-46-11
+    </a>
+  </div>
+
+</form>
+
+          
+      </div>
+
+      <!-- ===== ПРАВАЯ КОЛОНКА: СОСТОЯНИЕ ПОЛЕЙ + ПРЕИМУЩЕСТВА ===== -->
+      <div class="col-md-4">
+
+        <!-- Блок "Заявка принята" -->
+        <div class="border rounded p-3 mb-4 bg-light">
+          <h5 class="font-weight-bold">Заявка принята!</h5>
+          <p class="small text-muted mb-2">
+            Передаем в течение 15 минут, для согласования бесплатного замера.
+          </p>
+          <button class="btn btn-warning btn-block">ХОРОШО</button>
+        </div>
+
+        <!-- Блок "Состояние полей" (примеры для UI) -->
+        <div class="border rounded p-3 mb-4">
+          <h5 class="font-weight-bold mb-3">Состояние полей</h5>
+
+          <div class="form-group">
+            <label class="small">Обычное состояние</label>
+            <input type="text" class="form-control" value="Активное поле" readonly>
+          </div>
+
+          <div class="form-group">
+            <label class="small">Успешно</label>
+            <input type="text" class="form-control is-valid" value="Данные верны" readonly>
+          </div>
+
+          <div class="form-group">
+            <label class="small">Ошибка</label>
+            <input type="text" class="form-control is-invalid" value="Неверный формат" readonly>
+            <div class="invalid-feedback">Неверный формат</div>
+          </div>
+
+          <div class="form-group mb-0">
+            <label class="small">Отключено</label>
+            <input type="text" class="form-control" value="Недоступное поле" disabled>
+          </div>
+        </div>
+
+        <!-- Блок преимуществ -->
+        <div class="border rounded p-3 mb-3">
+          <p class="mb-1">📄 <strong>Работа по договору</strong></p>
+          <p class="small text-muted mb-0">
+            Стоимость в смете фиксируется и не меняется в процессе.
+          </p>
+        </div>
+
+        <div class="border rounded p-3">
+          <p class="mb-1">⏱️ <strong>Средний срок работ: всего 3–5 дней</strong></p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= ПОДВАЛ (такой же, как на главной) ================= -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-4 mb-4">
+          <h5 class="font-weight-bold">АМП22</h5>
+          <p class="text-muted small mb-0">
+            Профессиональное благоустройство территорий: укладка тротуарной плитки
+            в Барнауле и пригороде.
+          </p>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h6 class="font-weight-bold mb-3">НАВИГАЦИЯ</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-muted">Услуги и цены</a></li>
+            <li><a href="#" class="text-muted">Наши цены</a></li>
+            <li><a href="#" class="text-muted">Проекты</a></li>
+            <li><a href="#" class="text-muted">Отзывы клиентов</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h6 class="font-weight-bold mb-3">КОНТАКТЫ</h6>
+          <p class="text-muted mb-1">г. Барнаул, ул. Трактовая, д. 45</p>
+          <p class="mb-1">
+            <a href="tel:+79833824611" class="text-white font-weight-bold">
+              +7 (983) 382-46-11
+            </a>
+          </p>
+          <p class="text-muted mb-0">info@amp22.ru</p>
+        </div>
+
+      </div>
+
+      <hr class="border-secondary">
+
+      <div class="d-flex justify-content-between small text-muted">
+        <span>© 2012–2026 «АМП22». Все права защищены.</span>
+        <span>Разработка и благоустройство под ключ в Алтайском крае</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= СКРИПТЫ BOOTSTRAP ================= -->
+<!-- jQuery и Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+<!-- Маска для телефона -->
+<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
+
+<script>
+    // ===== МАСКА ДЛЯ ТЕЛЕФОНА =====
+    $(function () {
+      $("#phone").mask("+7 (999) 999-99-99");
+    });
+  </script> <!-- Вот здесь закрылся старый скрипт -->
+
+<script src="jquery.slim.min.js"></script>
+<script src="bootstrap.bundle.min.js"></script>
+<script src="maskedinput.min.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
